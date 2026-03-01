@@ -43,10 +43,10 @@ export default function Portfolio() {
             <div className="flex items-center gap-2 text-[var(--accent-color)] font-mono text-sm tracking-widest">
               <User size={16} /> ABOUT ME
             </div>
-            <h1 className="text-6xl md:text-8xl font-black italic transform -skew-x-6 bg-gradient-to-r from-[var(--text-main)] to-[var(--text-dim)] bg-clip-text text-transparent leading-tight">
+            <h1 className="text-6xl md:text-5xl font-black italic transform -skew-x-6 bg-gradient-to-r from-[var(--text-main)] to-[var(--text-dim)] bg-clip-text text-transparent leading-tight">
               {portfolioData.name.toUpperCase()}
             </h1>
-            <p className="text-xl text-[var(--text-dim)] max-w-md border-l-2 border-[var(--accent-color)] pl-6 leading-relaxed">
+            <p className="text-sm text-[var(--text-dim)] max-w-md border-l-2 border-[var(--accent-color)] pl-6 leading-relaxed">
               {portfolioData.bio}
             </p>
             <div className="flex flex-wrap gap-4 pt-4">
@@ -85,7 +85,7 @@ export default function Portfolio() {
       <section id="education" className="max-w-6xl mx-auto py-32 px-6 border-t border-white/5">
         <div className="flex items-center gap-4 mb-16">
           <GraduationCap className="text-[var(--accent-color)]" size={32} />
-          <h2 className="text-4xl font-black italic tracking-widest uppercase text-white border-b-2 border-[var(--accent-color)] pb-2">Education</h2>
+          <h2 className="text-4xl font-black italic tracking-widest uppercase text-black border-b-2 border-[var(--accent-color)] pb-2">Education</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {portfolioData.education.map((edu, i) => (
@@ -104,7 +104,7 @@ export default function Portfolio() {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-20 justify-center">
             <Code className="text-[var(--accent-color)]" size={32} />
-            <h2 className="text-4xl font-black italic tracking-widest uppercase text-white">Projects</h2>
+            <h2 className="text-4xl font-black italic tracking-widest uppercase text-black">Projects</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-10">
             {portfolioData.projects.map((p) => (
@@ -124,7 +124,7 @@ export default function Portfolio() {
       <section id="experience" className="max-w-4xl mx-auto py-32 px-6">
         <div className="flex items-center gap-4 mb-16">
           <Briefcase className="text-[var(--accent-color)]" size={32} />
-          <h2 className="text-4xl font-black italic tracking-widest uppercase text-white border-b-2 border-[var(--accent-color)] pb-2">Experience</h2>
+          <h2 className="text-4xl font-black italic tracking-widest uppercase text-black border-b-2 border-[var(--accent-color)] pb-2">Experience</h2>
         </div>
         <div className="space-y-12">
           {portfolioData.experience.map((ex, i) => (
@@ -140,7 +140,7 @@ export default function Portfolio() {
       {/* SECTION: SKILLS */}
       <section id="skills" className="max-w-4xl mx-auto py-32 px-6 border-t border-white/5">
         <div className="flex items-center gap-4 mb-16 justify-end">
-          <h2 className="text-4xl font-black italic tracking-widest uppercase text-white border-b-2 border-[var(--accent-color)] pb-2">Tech Stack</h2>
+          <h2 className="text-4xl font-black italic tracking-widest uppercase text-black border-b-2 border-[var(--accent-color)] pb-2">Tech Stack</h2>
           <Layers className="text-[var(--accent-color)]" size={32} />
         </div>
         <div className="flex flex-wrap gap-4 justify-end">
@@ -156,7 +156,7 @@ export default function Portfolio() {
       <section id="contact" className="py-32 px-6 text-center bg-gradient-to-b from-transparent to-[var(--accent-glow)] rounded-t-[100px]">
         <div className="flex items-center gap-4 mb-12 justify-center">
           <Send className="text-[var(--accent-color)]" size={32} />
-          <h2 className="text-4xl font-black italic tracking-widest uppercase text-white">Get In Touch</h2>
+          <h2 className="text-4xl font-black italic tracking-widest uppercase text-black">Get In Touch</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center gap-12 font-mono text-lg">
           <a href={`mailto:${portfolioData.email}`} className="flex items-center gap-3 text-[var(--text-dim)] hover:text-[var(--accent-color)] transition-all">
@@ -166,7 +166,7 @@ export default function Portfolio() {
             <Phone size={24} className="text-[var(--accent-color)]" /> {portfolioData.phone}
           </a>
         </div>
-        <p className="mt-20 text-[10px] tracking-[0.5em] opacity-30 uppercase">© {new Date().getFullYear()} {portfolioData.name}</p>
+        <p className="mt-20 text-[10px] tracking-[0.5em] opacity-30 uppercase">Design & Developed by {new Date().getFullYear()} {portfolioData.name}</p>
       </section>
 
       {/* Scroll to Top Button */}

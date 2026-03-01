@@ -20,30 +20,24 @@ export interface Education {
 }
 
 export const portfolioData = {
-  name: "Your Name",
-  bio: "Full Stack Developer | Building 3D Digital Experiences with Next.js & TypeScript.",
-  github: "https://github.com/yourusername",
-  linkedin: "https://linkedin.com/in/yourusername",
+  name: "Saffat Islam",
+  bio: "I am an Electrical and Electronics Engineering (EEE) student with a strong foundation in circuits, power systems, and electronics. Alongside my core studies, I have developed solid skills in software development, including C, C++, Python, and data structures. I enjoy building projects that integrate hardware and software, such as embedded systems and IoT applications. I am passionate about innovation, problem-solving, and continuously expanding my technical expertise.",
+  github: "https://github.com/Saffatdh",
+  linkedin: "https://www.linkedin.com/in/saf-fat-29b690267/",
   cvLink: "/my-cv.pdf", // Public folder e pdf ta rakho
-  email: "hello@example.com",
-  phone: "+880123456789",
-  profileImage: "https://media.licdn.com/dms/image/v2/your-linkedin-image-link", 
+  email: "saffatdh8800@outlook.com",
+  phone: "+8801722096725",
+  profileImage: "https://media.licdn.com/dms/image/v2/D5603AQE_jSvUa5L57w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715101607496?e=1773878400&v=beta&t=WnUxgQ5x07Zta-NuWeuwbxZSDwFxXKBkaAJy8xmDtS0", 
   
-  skills: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL", "Prisma", "Three.js"],
+  skills: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL","Django","Aurdino"],
 
   education: [
     {
-      degree: "Bachelor of Science in CSE",
-      institution: "Your University Name",
-      year: "2020 - 2024",
-      description: "Focused on Software Engineering and Modern Web Technologies."
+      degree: "Bachelor of Science in EEE",
+      institution: "American International University Bangladesh",
+      year: "2025 - 2028(Expected)",
+      description: ""
     },
-    {
-      degree: "Higher Secondary Certificate",
-      institution: "Your College Name",
-      year: "2018 - 2020",
-      description: "Science group with focus on Physics and Mathematics."
-    }
   ],
 
   projects: [
@@ -58,8 +52,8 @@ export const portfolioData = {
 
   experience: [
     {
-      company: "Tech Solutions",
-      year: "2023 - Present",
+      company: "SS Soft Tech",
+      year: "2023 - 2025",
       role: "Frontend Developer"
     }
   ]
