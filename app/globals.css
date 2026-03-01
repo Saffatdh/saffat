@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  /* Main Colors */
+  --bg-color: #cac7d0;           /* Pura website-er background */
+  --text-main: #232020;          /* Main heading color */
+  --text-dim: #1e1f20;           /* Paragraph ba bio color */
+  --accent-color: #0dac6f;       /* Theme color (Rose/Cyan/Gold jeta chao) */
+  --accent-glow: rgba(63, 244, 199, 0.3); /* Accent color er light glow */
+  --card-bg: rgba(255, 255, 255, 0.03);  /* Card ba box er background */
+  --nav-bg: rgba(255, 255, 255, 0.05);   /* Navbar background */
+}
+
+@theme inline {
+  --color-primary: var(--accent-color);
+  --color-bg-main: var(--bg-color);
+}
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    /* Aesthetic Mesh Background */
+    background-image: 
+      radial-gradient(at 0% 0%, var(--accent-glow) 0px, transparent 50%),
+      radial-gradient(at 100% 100%, rgba(216, 201, 251, 0.1) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Utilities for 3D */
+.perspective-1000 { perspective: 1000px; }
+.card-glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
