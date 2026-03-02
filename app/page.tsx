@@ -21,7 +21,7 @@ export default function Portfolio() {
 
      {/* --- Glass Navbar (No Logo) --- */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-6xl">
-        <div className="bg-black/20 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full flex justify-center items-center shadow-2xl relative">
+        <div className="bg-white/20 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full flex justify-center items-center shadow-2xl relative">
           
           {/* Desktop Menu - Centered */}
           <div className="hidden md:flex gap-8">
@@ -179,7 +179,7 @@ export default function Portfolio() {
       <section id="contact" className="py-24 px-6 text-center">
         <div className="flex items-center gap-4 mb-12 justify-center">
           <Send className="text-[var(--accent-color)]" size={32} />
-          <h2 className="text-3xl md:text-4xl font-black italic tracking-widest uppercase text-white">Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl font-black italic tracking-widest uppercase text-white">Contact</h2>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center gap-8 font-mono">
           <a href={`mailto:${portfolioData.email}`} className="flex items-center gap-3 text-[var(--text-dim)] hover:text-white transition-all text-sm md:text-lg">
@@ -189,7 +189,7 @@ export default function Portfolio() {
             <Phone size={20} className="text-[var(--accent-color)]" /> {portfolioData.phone}
           </a>
         </div>
-        <p className="mt-20 text-[10px] tracking-[0.4em] opacity-30 uppercase text-white">© {new Date().getFullYear()} {portfolioData.name}</p>
+        <p className="mt-20 text-[10px] tracking-[0.4em] opacity-30 uppercase text-white">Designed & Developed by {portfolioData.name} {new Date().getFullYear()}</p>
       </section>
 
       {/* --- Scroll to Top --- */}
