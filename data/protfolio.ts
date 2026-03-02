@@ -48,6 +48,15 @@ export const portfolioData = {
       fullDesc: " github repository link:  https://github.com/Saffatdh/simple_calculator_js.",
       link: "https://simple-calculator-js-six.vercel.app/"
     }
+    ,
+    {
+      id: 2,
+      title: "Autonomous Seed Sowing Robot",
+      shortDesc: "I was my university project and I built it in small scale",
+      fullDesc: "Developed an ESP32-powered agricultural robot featuring a 4-wheel drive system and an ultrasonic sensor for obstacle avoidance. Engineered dual functionality: an Automatic Mode for autonomous planting and an IoT Mobile Control Mode for remote operation. Integrated a high-precision seed dispensing motor and an automatic water pump to synchronize sowing with immediate irrigation. This project demonstrates expertise in robotics, sensor integration, and wireless communication to enhance precision farming efficiency.",
+      link: "",
+      image:"https://photos.app.goo.gl/J8EprS54nwWv6Zir7"
+    }
   ],
 
   experience: [

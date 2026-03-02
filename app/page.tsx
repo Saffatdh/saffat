@@ -19,10 +19,10 @@ export default function Portfolio() {
   return (
     <div className="min-h-screen relative selection:bg-[var(--accent-color)] selection:text-white overflow-x-hidden">
 
-     {/* --- Glass Navbar (No Logo) --- */}
+      {/* --- Glass Navbar (No Logo) --- */}
       <nav className="fixed top-6 left-1/2 -translate-x-1/2 z-[100] w-[90%] max-w-6xl">
         <div className="bg-white/20 backdrop-blur-xl border border-white/10 px-6 py-4 rounded-full flex justify-center items-center shadow-2xl relative">
-          
+
           {/* Desktop Menu - Centered */}
           <div className="hidden md:flex gap-8">
             {navLinks.map((link) => (
@@ -33,14 +33,14 @@ export default function Portfolio() {
           </div>
 
           {/* Mobile Menu Toggle (2 bars) - Right aligned for mobile view */}
-          <button 
+          <button
             onClick={() => setIsMenuOpen(true)}
             className="md:hidden text-white flex flex-col gap-1.5 p-1 absolute right-6"
           >
             <div className="w-6 h-[2px] bg-white"></div>
             <div className="w-4 h-[2px] bg-white"></div>
           </button>
-          
+
           {/* Mobile Placeholder for centering effect */}
           <div className="md:hidden text-white/60 text-[10px] font-bold tracking-widest uppercase">
             MENU
@@ -51,18 +51,18 @@ export default function Portfolio() {
       {/* --- Full Screen Mobile Menu Overlay --- */}
       {isMenuOpen && (
         <div className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-2xl flex flex-col items-center justify-center animate-in fade-in duration-300">
-          <button 
+          <button
             onClick={() => setIsMenuOpen(false)}
             className="absolute top-8 right-8 text-white/70 hover:text-white transition-all"
           >
             <X size={40} strokeWidth={1.5} />
           </button>
-          
+
           <div className="flex flex-col items-center gap-8">
             {navLinks.map((link) => (
-              <a 
-                key={link} 
-                href={`#${link.toLowerCase()}`} 
+              <a
+                key={link}
+                href={`#${link.toLowerCase()}`}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-4xl font-black italic uppercase tracking-tighter text-white hover:text-[var(--accent-color)] transition-all"
               >
@@ -86,7 +86,7 @@ export default function Portfolio() {
             <p className="text-base text-[var(--text-dim)] max-w-lg mx-auto lg:mx-0 border-l-0 lg:border-l-2 border-[var(--accent-color)] lg:pl-6 leading-relaxed">
               {portfolioData.bio}
             </p>
-            
+
             {/* All Buttons including LinkedIn */}
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
               <a href={portfolioData.cvLink} download className="flex items-center gap-2 px-8 py-3 bg-[var(--accent-color)] text-white font-black rounded-full hover:scale-105 transition-all shadow-lg text-sm">
@@ -210,6 +210,14 @@ export default function Portfolio() {
             <a href={selectedProject.link} target="_blank" className="inline-flex items-center gap-3 px-8 py-3 bg-[var(--accent-color)] text-white font-black rounded-full hover:scale-105 transition-all text-sm">
               LIVE PREVIEW <ExternalLink size={18} />
             </a>
+            <div className="relative h-48 w-full">
+              <img
+                className="w-full h-full object-cover"
+                src={selectedProject.fullDesc}
+                alt={selectedProject.title}
+              />
+              
+            </div>
           </div>
         </div>
       )}
