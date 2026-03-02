@@ -1,19 +1,11 @@
 @import "tailwindcss";
 
 :root {
-  /* Main Colors */
-  --bg-color: #cac7d0;           /* Pura website-er background */
-  --text-main: #232020;          /* Main heading color */
-  --text-dim: #1e1f20;           /* Paragraph ba bio color */
-  --accent-color: #0dac6f;       /* Theme color (Rose/Cyan/Gold jeta chao) */
-  --accent-glow: rgba(63, 244, 199, 0.3); /* Accent color er light glow */
-  --card-bg: rgba(255, 255, 255, 0.03);  /* Card ba box er background */
-  --nav-bg: rgba(255, 255, 255, 0.05);   /* Navbar background */
-}
-
-@theme inline {
-  --color-primary: var(--accent-color);
-  --color-bg-main: var(--bg-color);
+  --bg-color: #020617;           /* একদম ডার্ক ব্যাকগ্রাউন্ড */
+  --text-main: #f8fafc;           /* উজ্জ্বল সাদা টেক্সট */
+  --text-dim: #94a3b8;           /* হালকা ধূসর টেক্সট */
+  --accent-color: #22c55e;       /* ছবির মতো সবুজ কালার */
+  --accent-glow: rgba(34, 197, 94, 0.2);
 }
 
 @layer base {
@@ -23,18 +15,22 @@
     color: var(--text-main);
     margin: 0;
     font-family: 'Inter', sans-serif;
-    /* Aesthetic Mesh Background */
+    /* ছবির মতো ডার্ক মেশ গ্রেডিয়েন্ট */
     background-image: 
-      radial-gradient(at 0% 0%, var(--accent-glow) 0px, transparent 50%),
-      radial-gradient(at 100% 100%, rgba(216, 201, 251, 0.1) 0px, transparent 50%);
+      radial-gradient(at 0% 0%, #064e3b 0px, transparent 50%),
+      radial-gradient(at 100% 0%, #020617 0px, transparent 50%),
+      radial-gradient(at 50% 50%, #14532d 0px, transparent 50%),
+      radial-gradient(at 100% 100%, #064e3b 0px, transparent 50%),
+      radial-gradient(at 0% 100%, #020617 0px, transparent 50%);
     background-attachment: fixed;
   }
 }
 
-/* Custom Utilities for 3D */
 .perspective-1000 { perspective: 1000px; }
 .card-glass {
-  background: var(--card-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }

@@ -29,7 +29,7 @@ export const portfolioData = {
   phone: "+8801722096725",
   profileImage: "https://media.licdn.com/dms/image/v2/D5603AQE_jSvUa5L57w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1715101607496?e=1773878400&v=beta&t=WnUxgQ5x07Zta-NuWeuwbxZSDwFxXKBkaAJy8xmDtS0", 
   
-  skills: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL","Django","Aurdino"],
+  skills: ["python", "C" , "C++","Javascripts" ,"Next.js", "TypeScript", "Tailwind CSS", "Node.js", "PostgreSQL","Django","Aurdino", "Adobe Photoshop", "Adobe Illustrator", "MS Word","Power point","Excel"],
 
   education: [
     {
