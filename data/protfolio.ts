@@ -46,7 +46,7 @@ export const portfolioData = {
       title: "Calculator Using JS",
       shortDesc: "Design a calculator using html,css and js",
       fullDesc: " github repository link:  https://github.com/Saffatdh/simple_calculator_js.",
-      link: "simple-calculator-js-six.vercel.app"
+      link: "https://simple-calculator-js-six.vercel.app/"
     }
   ],
 
