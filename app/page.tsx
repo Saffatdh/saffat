@@ -200,24 +200,50 @@ export default function Portfolio() {
         <ChevronUp size={24} />
       </button>
 
-      {/* --- Project Modal --- */}
+      {/* --- Project Modal (With Image Fix) --- */}
       {selectedProject && (
-        <div className="fixed inset-0 z-[300] flex items-center justify-center p-4 bg-black/90 backdrop-blur-md">
-          <div className="bg-slate-900 border border-white/10 p-8 md:p-12 rounded-[40px] max-w-2xl w-full relative">
-            <button onClick={() => setSelectedProject(null)} className="absolute top-6 right-6 text-white/50 hover:text-white"><X size={32} /></button>
-            <h2 className="text-3xl md:text-4xl font-black mb-6 text-[var(--accent-color)] italic uppercase">{selectedProject.title}</h2>
-            <p className="text-slate-300 leading-relaxed text-sm md:text-lg mb-8">{selectedProject.fullDesc}</p>
-            <a href={selectedProject.link} target="_blank" className="inline-flex items-center gap-3 px-8 py-3 bg-[var(--accent-color)] text-white font-black rounded-full hover:scale-105 transition-all text-sm">
-              LIVE PREVIEW <ExternalLink size={18} />
-            </a>
-            <div className="relative h-48 w-full">
-              <img
-                className="w-full h-full object-cover"
-                src={selectedProject.fullDesc}
-                alt={selectedProject.title}
+        <div className="fixed inset-0 z-[300] flex items-center justify-center p-4 bg-black/95 backdrop-blur-md animate-in fade-in duration-300">
+          <div className="bg-slate-900 border border-white/10 p-5 md:p-10 rounded-[30px] md:rounded-[50px] max-w-2xl w-full relative max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl">
+            
+            {/* Close Button */}
+            <button 
+              onClick={() => setSelectedProject(null)} 
+              className="absolute top-4 right-4 text-white/50 hover:text-white z-[310]"
+            >
+              <X size={28} />
+            </button>
+            
+            {/* 1. Project Image (Shobar upore) */}
+            <div className="relative w-full h-48 md:h-72 mb-6">
+              <img 
+                src={selectedProject.image} 
+                className="w-full h-full object-cover rounded-[20px] md:rounded-[30px] border border-white/10 shadow-xl" 
+                alt={selectedProject.title} 
+                onError={(e) => { (e.target as HTMLImageElement).src = "https://via.placeholder.com/600x400?text=Project+Image" }}
               />
-              
             </div>
+
+            {/* 2. Project Title */}
+            <h2 className="text-2xl md:text-4xl font-black mb-4 text-[var(--accent-color)] italic uppercase leading-tight">
+              {selectedProject.title}
+            </h2>
+
+            {/* 3. Project Description */}
+            <p className="text-slate-300 leading-relaxed text-sm md:text-base mb-8">
+              {selectedProject.fullDesc}
+            </p>
+            
+            {/* 4. Action Button */}
+            <div className="flex justify-center md:justify-start">
+              <a 
+                href={selectedProject.link} 
+                target="_blank" 
+                className="inline-flex items-center gap-3 px-8 py-3 bg-[var(--accent-color)] text-white font-black rounded-full hover:scale-105 transition-all text-xs md:text-sm shadow-lg"
+              >
+                LIVE PREVIEW <ExternalLink size={18} />
+              </a>
+            </div>
+
           </div>
         </div>
       )}

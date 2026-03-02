@@ -4,6 +4,7 @@ export interface Project {
   shortDesc: string;
   fullDesc: string;
   link: string;
+  image: string;
 }
 
 export interface Experience {
@@ -46,7 +47,8 @@ export const portfolioData = {
       title: "Calculator Using JS",
       shortDesc: "Design a calculator using html,css and js",
       fullDesc: " github repository link:  https://github.com/Saffatdh/simple_calculator_js.",
-      link: "https://simple-calculator-js-six.vercel.app/"
+      link: "https://simple-calculator-js-six.vercel.app/",
+      image:""
     }
     ,
     {
@@ -54,8 +56,8 @@ export const portfolioData = {
       title: "Autonomous Seed Sowing Robot",
       shortDesc: "I was my university project and I built it in small scale",
       fullDesc: "Developed an ESP32-powered agricultural robot featuring a 4-wheel drive system and an ultrasonic sensor for obstacle avoidance. Engineered dual functionality: an Automatic Mode for autonomous planting and an IoT Mobile Control Mode for remote operation. Integrated a high-precision seed dispensing motor and an automatic water pump to synchronize sowing with immediate irrigation. This project demonstrates expertise in robotics, sensor integration, and wireless communication to enhance precision farming efficiency.",
-      link: "",
-      image:"https://photos.app.goo.gl/J8EprS54nwWv6Zir7"
+      link: "https://photos.google.com/share/AF1QipNM1dZdHwvKwc6NVD47KvgY6wkMCBKhPAgydZb_vSSPuKem_EpHbY3Bo2iJgqqbUQ?key=cmR5SU05NjZiX2djMDdQUm5Hdmx1amhra1M5aHlR",
+      image:"https://photos.google.com/share/AF1QipNM1dZdHwvKwc6NVD47KvgY6wkMCBKhPAgydZb_vSSPuKem_EpHbY3Bo2iJgqqbUQ?key=cmR5SU05NjZiX2djMDdQUm5Hdmx1amhra1M5aHlR"
     }
   ],
 
