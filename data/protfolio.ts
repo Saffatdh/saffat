@@ -43,10 +43,10 @@ export const portfolioData = {
   projects: [
     {
       id: 1,
-      title: "AI SaaS Platform",
-      shortDesc: "An AI-powered content generator built with Next.js.",
-      fullDesc: "This project leverages GPT-4 to generate high-quality blog posts. It includes a subscription model via Stripe and a dashboard for user analytics.",
-      link: "https://ai-saas.com"
+      title: "Calculator Using JS",
+      shortDesc: "Design a calculator using html,css and js",
+      fullDesc: " github repository link:  https://github.com/Saffatdh/simple_calculator_js.",
+      link: "simple-calculator-js-six.vercel.app"
     }
   ],
 
