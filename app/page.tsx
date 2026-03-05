@@ -69,7 +69,11 @@ export default function Portfolio() {
               {portfolioData.bio}
             </p>
             <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-              <a href={portfolioData.cvLink} download className="flex items-center gap-2 px-8 py-3 bg-[var(--accent-color)] text-white font-black rounded-full hover:scale-105 transition-all shadow-lg text-sm">
+              <a
+                href="/cv.pdf" // Path relative to the public folder
+                download="My_Awesome_Resume.pdf" // Optional: renames the file for the user
+                className="flex items-center gap-2 px-8 py-3 bg-[var(--accent-color)] text-white font-black rounded-full hover:scale-105 transition-all shadow-lg text-sm"
+              >
                 <Download size={18} /> DOWNLOAD CV
               </a>
               <a href={portfolioData.github} target="_blank" className="flex items-center gap-2 px-8 py-3 bg-black text-white font-black rounded-full hover:scale-105 transition-all text-sm">
@@ -90,6 +94,7 @@ export default function Portfolio() {
       </section>
 
       {/* --- SECTION: EDUCATION --- */}
+      {/* --- SECTION: EDUCATION --- */}
       <section id="education" className="max-w-6xl mx-auto py-24 px-6 border-t border-black/5">
         <div className="flex items-center gap-4 mb-16">
           <GraduationCap className="text-black" size={32} />
@@ -97,11 +102,28 @@ export default function Portfolio() {
         </div>
         <div className="grid md:grid-cols-2 gap-8">
           {portfolioData.education.map((edu, i) => (
-            <div key={i} className="bg-black/5 p-8 rounded-[30px] border border-transparent hover:border-black/20 transition-all">
-              <span className="text-black/60 font-mono text-sm font-bold">{edu.year}</span>
-              <h3 className="text-2xl font-bold mt-2 text-black">{edu.degree}</h3>
-              <p className="text-black/70 italic mb-4">{edu.institution}</p>
-              <p className="text-black/80 text-sm leading-relaxed">{edu.description}</p>
+            <div key={i} className="bg-black/5 p-8 rounded-[30px] border border-transparent hover:border-black/20 transition-all flex flex-col sm:flex-row gap-6 items-start">
+
+              {/* 1. Institute Logo */}
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 rounded-2xl bg-white border border-black/5 overflow-hidden flex items-center justify-center shadow-sm">
+                  <img
+                    src={edu.logo} // Ensure 'logo' is a key in your portfolioData.education objects
+                    alt={`${edu.institution} logo`}
+                    className="w-12 h-12 object-contain"
+                    onError={(e) => { (e.target as HTMLImageElement).src = "https://via.placeholder.com/100?text=EDU" }}
+                  />
+                </div>
+              </div>
+
+              {/* 2. Education Details */}
+              <div className="flex-1">
+                <span className="text-black/60 font-mono text-sm font-bold">{edu.year}</span>
+                <h3 className="text-2xl font-bold mt-1 text-black leading-tight">{edu.degree}</h3>
+                <p className="text-black/70 italic mb-4 font-medium">{edu.institution}</p>
+                <p className="text-black/80 text-sm leading-relaxed">{edu.description}</p>
+              </div>
+
             </div>
           ))}
         </div>
@@ -200,7 +222,7 @@ export default function Portfolio() {
           <div className="bg-white border border-black/10 p-5 md:p-10 rounded-[30px] md:rounded-[50px] max-w-2xl w-full relative max-h-[90vh] overflow-y-auto no-scrollbar shadow-2xl">
             <button onClick={() => setSelectedProject(null)} className="absolute top-4 right-4 text-black hover:opacity-50 z-[310]"><X size={28} /></button>
             <div className="relative w-full h-48 md:h-72 mb-6">
-              <img src={selectedProject.image} className="w-full h-full object-cover rounded-[20px] md:rounded-[30px] border border-black/10 shadow-xl" alt={selectedProject.title} />
+              <img src={selectedProject.image} className="w-full h-full rounded-[20px] md:rounded-[30px] border border-black/10 shadow-xl" alt={selectedProject.title} />
             </div>
             <h2 className="text-2xl md:text-4xl font-black mb-4 text-black italic uppercase leading-tight">{selectedProject.title}</h2>
             <p className="text-black/80 leading-relaxed text-sm md:text-base mb-8">{selectedProject.fullDesc}</p>
