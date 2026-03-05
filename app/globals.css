@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --bg-color: #020617;           /* একদম ডার্ক ব্যাকগ্রাউন্ড */
-  --text-main: #f8fafc;           /* উজ্জ্বল সাদা টেক্সট */
-  --text-dim: #94a3b8;           /* হালকা ধূসর টেক্সট */
-  --accent-color: #22c55e;       /* ছবির মতো সবুজ কালার */
+  --bg-color: #f3f5ff;           /* একদম ডার্ক ব্যাকগ্রাউন্ড */
+  --text-main: #050505;           /* উজ্জ্বল সাদা টেক্সট */
+  --text-dim: #2f3339;           /* হালকা ধূসর টেক্সট */
+  --accent-color: #39afd0;       /* ছবির মতো সবুজ কালার */
   --accent-glow: rgba(34, 197, 94, 0.2);
 }
 
@@ -17,11 +17,11 @@
     font-family: 'Inter', sans-serif;
     /* ছবির মতো ডার্ক মেশ গ্রেডিয়েন্ট */
     background-image: 
-      radial-gradient(at 0% 0%, #064e3b 0px, transparent 50%),
-      radial-gradient(at 100% 0%, #020617 0px, transparent 50%),
-      radial-gradient(at 50% 50%, #14532d 0px, transparent 50%),
-      radial-gradient(at 100% 100%, #064e3b 0px, transparent 50%),
-      radial-gradient(at 0% 100%, #020617 0px, transparent 50%);
+      radial-gradient(at 0% 0%, #d7f8ef 0px, transparent 50%),
+      radial-gradient(at 100% 0%, #dce0f1 0px, transparent 50%),
+      radial-gradient(at 50% 50%, #e2f3f2 0px, transparent 50%),
+      radial-gradient(at 100% 100%, #f9e8fa 0px, transparent 50%),
+      radial-gradient(at 0% 100%, #d7f3f5 0px, transparent 50%);
     background-attachment: fixed;
   }
 }

@@ -58,12 +58,21 @@ export const portfolioData = {
       fullDesc: "Developed an ESP32-powered agricultural robot featuring a 4-wheel drive system and an ultrasonic sensor for obstacle avoidance. Engineered dual functionality: an Automatic Mode for autonomous planting and an IoT Mobile Control Mode for remote operation. Integrated a high-precision seed dispensing motor and an automatic water pump to synchronize sowing with immediate irrigation. This project demonstrates expertise in robotics, sensor integration, and wireless communication to enhance precision farming efficiency.",
       link: "https://photos.google.com/share/AF1QipNM1dZdHwvKwc6NVD47KvgY6wkMCBKhPAgydZb_vSSPuKem_EpHbY3Bo2iJgqqbUQ?key=cmR5SU05NjZiX2djMDdQUm5Hdmx1amhra1M5aHlR",
       image:"https://photos.google.com/share/AF1QipNM1dZdHwvKwc6NVD47KvgY6wkMCBKhPAgydZb_vSSPuKem_EpHbY3Bo2iJgqqbUQ?key=cmR5SU05NjZiX2djMDdQUm5Hdmx1amhra1M5aHlR"
-    }
+    },
+    // {
+    //   id: 3,
+    //   title: "Nextjs Business Website",
+    //   shortDesc: "It is basically clone of and Autralian construction business web ",
+    //   fullDesc: "This demo project build by using Nextjs (which is a javascript framework) , Tailwind , lucide-react ",
+    //   link: "",
+    //   image:""
+    // }
+
   ],
 
   experience: [
     {
-      company: "SS Soft Tech",
+      company: "Intelixel",
       year: "2023 - 2025",
       role: "Frontend Developer"
     }
